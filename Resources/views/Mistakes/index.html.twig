@@ -1,0 +1,13 @@
+
+aaaaaaaaaa
+
+{% block title %}Mistakes{% endblock%}
+{% block body %}
+
+    {% for key, error in errors %}
+      {% for key, project in projects %}
+        <li>{{ key }} : {{ project.name|e }} : {{ error.key }}</li>
+    {% endfor %}
+    {% endfor %}
+    
+{% endblock %}
